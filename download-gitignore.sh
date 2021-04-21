@@ -12,7 +12,7 @@ else
     LANG="$1"
 fi
 
-URL="https://github.com/github/gitignore/raw/master/$LANG.gitignore"
+URL="https://raw.githubusercontent.com/github/gitignore/master/$LANG.gitignore"
 
 if [ -f ".gitignore" ]; then
     echo "Error: .gitignore exists."
