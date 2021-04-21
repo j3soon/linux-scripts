@@ -64,11 +64,18 @@
   SCRIPT="$BATS_TEST_DIRNAME/git-commit-empty.sh"
   TEMP_DIR="$(mktemp -d)"
   cd $TEMP_DIR
-  # Test Normal
   run git init
+  run git config --get user.name
+  if [ "$status" -ne 0 ]; then
+    git config user.email "you@example.com"
+    git config user.name "Your Name"
+  fi
+  # Test Normal
   run git log
+  echo $output
   [ "$status" -ne 0 ]
   run $SCRIPT
+  echo $output
   [ "$status" -eq 0 ]
   run git log
   [ "$status" -eq 0 ]

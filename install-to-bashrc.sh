@@ -3,8 +3,7 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 COMMAND="export PATH=$DIR:\$PATH"
-if cat $HOME/.bashrc | grep "$COMMAND"
-then
+if cat $HOME/.bashrc | grep "$COMMAND"; then
     echo "Error: Already installed."
     exit 1
 else
