@@ -41,6 +41,7 @@ sed -i "s/^plugins=.*$/$PLUGINS/g" ~/.zshrc
 echo "Set up plugins."
 
 read -p "Change default shell to zsh? (y/n)" -n 1 -r
+echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
     chsh -s $(which zsh)
@@ -48,6 +49,7 @@ then
 fi
 
 read -p "Use powerline theme? (y/n)" -n 1 -r
+echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
     sudo apt-get install -y fonts-powerline
