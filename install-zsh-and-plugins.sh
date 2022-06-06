@@ -32,7 +32,10 @@ EOF
 )
 PLUGINS=$(echo "$PLUGINS" | sed -z 's/\n/\\n/g')
 sed -i "s/^plugins=.*$/$PLUGINS/g" ~/.zshrc
-echo "Installed plugins."
+echo "Set up plugins."
+
+sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="agnoster"/g' ~/.zshrc
+echo "Set up theme."
 
 echo "Done."
 
