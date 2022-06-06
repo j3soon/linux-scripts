@@ -57,4 +57,9 @@ fi
 
 echo "Done."
 
+# If the script fails, execute the followings and reinstall:
+# sudo rm -rf ~/.zshrc
+# sudo rm -rf ~/.oh-my-zsh
+# sudo rm -rf ~/.fzf
+
 exec zsh
