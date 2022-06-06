@@ -5,6 +5,8 @@ if [ -f $HOME/.zshrc ]; then
     exit 1
 fi
 
+sudo apt-get update
+
 sudo apt-get install -y zsh
 echo "Installed $(zsh --version)."
 
@@ -12,7 +14,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo "Installed oh-my-zsh."
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install<&-
 echo "Installed fzf $(fzf --version)."
 
 sudo apt-get install -y curl
