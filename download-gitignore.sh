@@ -1,5 +1,4 @@
-#!/bin/bash
-set -e
+#!/bin/bash -e
 
 ARG_LOWER="$(echo $1 | tr '[:upper:]' '[:lower:]')"
 if [ "$ARG_LOWER" = "python" ]; then

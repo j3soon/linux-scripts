@@ -1,5 +1,4 @@
-#!/bin/bash
-set -e
+#!/bin/bash -e
 
 if git log > /dev/null 2>&1; then
     echo "Error: Your git repository already contains commits."
