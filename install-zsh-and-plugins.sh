@@ -12,7 +12,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo "Installed oh-my-zsh."
 
 sudo apt-get install -y fzf
-echo "Installed fzf."
+echo "Installed fzf $(fzf --version)."
+
+sudo apt-get install -y curl
+echo "Installed $(curl --version)."
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 echo "Installed zsh-autosuggestions."
