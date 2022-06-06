@@ -40,18 +40,14 @@ PLUGINS=$(echo "$PLUGINS" | sed -z 's/\n/\\n/g')
 sed -i "s/^plugins=.*$/$PLUGINS/g" ~/.zshrc
 echo "Set up plugins."
 
-read -p "Change default shell to zsh? (y/n)" -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
+read -p "Change default shell to zsh (y/n)? " REPLY
+if [ "$REPLY" = "y" ]; then
     chsh -s $(which zsh)
     echo "Changed default shell."
 fi
 
-read -p "Use powerline theme? (y/n)" -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
+read -p "Use powerline theme (y/n)? " REPLY
+if [ "$REPLY" = "y" ]; then
     sudo apt-get install -y fonts-powerline
     echo "Installed fonts-powerline."
     sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="agnoster"/g' ~/.zshrc
