@@ -52,7 +52,10 @@ if [ "$REPLY" = "y" ]; then
     echo "Installed fonts-powerline."
     sed -i 's/^ZSH_THEME=.*$/ZSH_THEME="agnoster"/g' ~/.zshrc
     echo "Set up powerline theme."
-    echo "Please restart your machine with `sudo reboot`."
+    read -p "Reboot now (y/n)? " REPLY
+    if [ "$REPLY" = "y" ]; then
+        sudo reboot
+    fi
 fi
 
 echo "Done."

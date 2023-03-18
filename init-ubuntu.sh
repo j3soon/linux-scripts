@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# Kill & Prevent future `Connect Your Online Accounts` popup
+# Kill & Prevent future "Connect Your Online Accounts" popup
 # Ref: https://askubuntu.com/a/1030095
 killall gnome-initial-setup
 sudo apt-get purge -y gnome-initial-setup
@@ -29,4 +29,9 @@ sudo apt-get install -y vim tmux git curl
 # Ref: https://askubuntu.com/a/992351
 gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop']"
 
-echo "Please restart your machine with `sudo reboot`."
+read -p "Reboot now (y/n)? " REPLY
+if [ "$REPLY" = "y" ]; then
+    sudo reboot
+fi
+
+echo "Done."
