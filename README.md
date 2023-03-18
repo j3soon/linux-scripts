@@ -2,6 +2,8 @@
 
 [![Test suite status](https://github.com/j3soon/linux-scripts/actions/workflows/main.yml/badge.svg?branch=master&event=push)](https://github.com/j3soon/linux-scripts/actions/workflows/main.yml)
 
+Most of the scripts are only tested on Ubuntu, and may require changes when running on other distros.
+
 ## Run Once
 
 You can run individual scripts by `curl`.
@@ -9,7 +11,7 @@ You can run individual scripts by `curl`.
 Take `init-ubuntu` as an example:
 
 ```sh
-sudo apt install -y curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/j3soon/linux-scripts/master/init-ubuntu.sh)"
+sudo apt-get install -y curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/j3soon/linux-scripts/master/init-ubuntu.sh)"
 ```
 
 ## Clone the Repo
