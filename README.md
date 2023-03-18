@@ -10,6 +10,14 @@ cd linux-scripts
 ./install-to-bashrc.sh
 ```
 
+## Run Once
+
+Take `init-ubuntu` as an example:
+
+```sh
+sudo apt install -y curl && sh -c "$(curl -sSL https://raw.githubusercontent.com/j3soon/linux-scripts/master/init-ubuntu.sh)"
+```
+
 ## Testing
 
 Install [bats](https://github.com/sstephenson/bats).
