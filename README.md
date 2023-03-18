@@ -11,7 +11,7 @@ You can run individual scripts by `curl`.
 Take `init-ubuntu` as an example:
 
 ```sh
-sudo apt-get install -y curl && sh -c "$(curl -fsSL https://raw.githubusercontent.com/j3soon/linux-scripts/master/init-ubuntu.sh)"
+sudo apt-get install -y curl && bash -c "$(curl -fsSL https://raw.githubusercontent.com/j3soon/linux-scripts/master/init-ubuntu.sh)"
 ```
 
 ## Clone the Repo
