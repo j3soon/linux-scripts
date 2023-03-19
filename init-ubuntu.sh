@@ -23,6 +23,7 @@ LC_IDENTIFICATION="en_US.UTF-8"
 EOF'
 
 # Install common tools
+sudo apt-get update
 sudo apt-get install -y vim tmux git curl
 
 # Ubuntu dock

@@ -11,6 +11,7 @@ You can run individual scripts by `curl`.
 Take `init-ubuntu` as an example:
 
 ```sh
+sudo apt-get update
 sudo apt-get install -y curl && bash -c "$(curl -fsSL https://raw.githubusercontent.com/j3soon/linux-scripts/master/init-ubuntu.sh)"
 ```
 
