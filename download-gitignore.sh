@@ -9,6 +9,8 @@ elif [ "$ARG_LOWER" = "cpp" ]; then
     LANG="C++"
 elif [ "$ARG_LOWER" = "ros" ]; then
     LANG="ROS"
+elif [ "$ARG_LOWER" = "ros2" ]; then
+    LANG="community/ROS2"
 else
     LANG="$1"
 fi
