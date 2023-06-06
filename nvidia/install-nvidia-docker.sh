@@ -6,6 +6,7 @@ echo "Testing Docker installation..."
 docker run --rm hello-world
 
 echo "Begin installing NVIDIA Docker..."
+sudo apt-get update
 sudo apt-get install -y curl
 # Ref: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#setting-up-nvidia-container-toolkit
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
