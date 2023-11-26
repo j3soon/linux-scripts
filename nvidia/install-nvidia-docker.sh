@@ -18,6 +18,6 @@ sudo apt-get update
 sudo apt-get install -y nvidia-docker2
 sudo apt-get install -y nvidia-container-runtime
 sudo systemctl restart docker
-docker run --rm --gpus all nvidia/cuda:10.0-base nvidia-smi
+docker run --rm --gpus all nvidia/cuda:11.0.3-base nvidia-smi
 
 echo "Done."
